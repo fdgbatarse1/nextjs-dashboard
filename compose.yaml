@@ -1,0 +1,17 @@
+services:
+  npm:
+    build:
+      context: .
+      dockerfile: dockerfiles/npm.dockerfile
+    stdin_open: true
+    tty: true
+    volumes:
+      - ./:/app
+  next:
+    build:
+      context: .
+      dockerfile: dockerfiles/next.dockerfile
+    ports:
+      - 3000:3000
+    volumes:
+      - .:/app/frontend
