@@ -1,0 +1,11 @@
+node_modules
+build
+.dockerignore
+.gitignore
+dockerfiles
+.git
+creds
+*.env
+charts/*
+*.yml
+.next
